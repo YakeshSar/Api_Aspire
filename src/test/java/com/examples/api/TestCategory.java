@@ -1,75 +1,41 @@
 package com.examples.api;
 
 import static org.testng.Assert.assertEquals;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
-public class TestCategory {
 
-	static String param = "food";
+public class TestCategory extends EndPoints {
 
-	public static Response responseURI() {
-		RestAssured.baseURI = "https://coinmap.org/";
-		RequestSpecification request = RestAssured.given();
-		Response response = request.get("api/v1/venues/");
-		return response;
+	@BeforeMethod()
+	public void beforeMethod() {
+		System.out.println("start the execution");
 	}
 
-	public static int getCount() {
-		Response response = responseURI();
-		JsonPath jsonPath = response.jsonPath();
-		List<Categories> list = jsonPath.getList("venues", Categories.class);
-		int count = 0;
-		for (Categories categories : list) {
-			if (categories.category.equals(param)) {
-				count++;
-			}
-		}
-		return count;
-	}
-
-	@Test
+	@Test(priority = 0)
 	public void verifyGetMethod() {
 		Response response = responseURI();
 		System.out.println(response.statusCode());
 		assertEquals(200, response.statusCode());
 	}
 
-	@Test
-	public void getCountOfCategory() {
-		switch (param) {
-		case "atm":
-			System.out.println(getCount());
-			break;
-		case "food":
-			System.out.println(getCount());
-			break;
-		case "cafe":
-			System.out.println(getCount());
-			break;
-		case "shopping":
-			System.out.println(getCount());
-			break;
-		case "attraction":
-			System.out.println(getCount());
-			break;
-		case "lodging":
-			System.out.println(getCount());
-			break;
-		case "default":
-			System.out.println(getCount());
-			break;
-		default:
-			System.out.println("Invalid Query");
-			break;
+	@Test(priority = 1)
+	public void getCount() {
+		HashMap<String, Integer> count = getCountOfCategory();
+		Set<Entry<String, Integer>> entrySet = count.entrySet();
+		for (Entry<String, Integer> entry : entrySet) {
+			System.out.println(entry.getKey() + "  " + entry.getValue());
 		}
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void getGeoLocationForFoodCategory() {
 		Response response = responseURI();
 		JsonPath jsonPath = response.jsonPath();
@@ -82,4 +48,10 @@ public class TestCategory {
 			}
 		}
 	}
+
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("end the execution");
+	}
+
 }

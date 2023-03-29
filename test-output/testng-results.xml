@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11726" started-at="2023-03-27T15:34:06Z" finished-at="2023-03-27T15:34:17Z">
+  <suite name="Default suite" duration-ms="44140" started-at="2023-03-29T18:12:02Z" finished-at="2023-03-29T18:12:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11726" started-at="2023-03-27T15:34:06Z" finished-at="2023-03-27T15:34:17Z">
+    <test name="Default test" duration-ms="44140" started-at="2023-03-29T18:12:02Z" finished-at="2023-03-29T18:12:46Z">
       <class name="com.examples.api.TestCategory">
-        <test-method status="PASS" signature="getGeoLocationForFoodCategory()[pri:0, instance:com.examples.api.TestCategory@18ce0030]" name="getGeoLocationForFoodCategory" duration-ms="11709" started-at="2023-03-27T15:34:06Z" finished-at="2023-03-27T15:34:17Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="beforeMethod" is-config="true" duration-ms="4" started-at="2023-03-29T18:12:02Z" finished-at="2023-03-29T18:12:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyGetMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="verifyGetMethod" duration-ms="8182" started-at="2023-03-29T18:12:02Z" finished-at="2023-03-29T18:12:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="afterMethod" is-config="true" duration-ms="0" started-at="2023-03-29T18:12:10Z" finished-at="2023-03-29T18:12:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-03-29T18:12:10Z" finished-at="2023-03-29T18:12:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getCount()[pri:1, instance:com.examples.api.TestCategory@5e316c74]" name="getCount" duration-ms="18502" started-at="2023-03-29T18:12:10Z" finished-at="2023-03-29T18:12:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCount -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-03-29T18:12:29Z" finished-at="2023-03-29T18:12:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="afterMethod" is-config="true" duration-ms="0" started-at="2023-03-29T18:12:29Z" finished-at="2023-03-29T18:12:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="getGeoLocationForFoodCategory()[pri:2, instance:com.examples.api.TestCategory@5e316c74]" name="getGeoLocationForFoodCategory" duration-ms="17433" started-at="2023-03-29T18:12:29Z" finished-at="2023-03-29T18:12:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getGeoLocationForFoodCategory -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.examples.api.TestCategory@5e316c74]" name="afterMethod" is-config="true" duration-ms="0" started-at="2023-03-29T18:12:46Z" finished-at="2023-03-29T18:12:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- com.examples.api.TestCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
